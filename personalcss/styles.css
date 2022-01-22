@@ -5,13 +5,14 @@
 }
 .header {
   background: linear-gradient(to top , #d40f0f, #3a0303 );
-    width: 100;
+    width: 100vw;
     position: fixed;
     
   }
 .header__barraPrin{       /*barra principal de la pagina */
     background: linear-gradient(to top, rgb(189, 171, 35),rgb(233, 212, 126));
     padding: 2px;
+    width: 100vw;
   
 }
 
@@ -78,6 +79,7 @@
 .container{
     position: static;
     display: inline-flex;
+    width: 100%;
 }
 
 .card-title{
@@ -151,6 +153,7 @@
 }
 .container {
   display: flex;
+  width: 80vw;
  
 }
 .row .container__figure {
@@ -186,14 +189,15 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
 footer{
-  width: 100%;
+  width: 100vw;
   position: static;
   bottom: 0;
   left: 0;
   background: linear-gradient(to top , #3a0303, #d40f0f );
 }
 footer .content{
-  max-width: 1350px;
+  /*max-width: 1350px;*/
+  width: 100vw;
   margin: auto;
   padding: 20px;
   display: flex;
@@ -280,7 +284,10 @@ footer .bottom{
   padding: 0 40px 5px 0;
 }
 footer .bottom a{
-  color: #eb2f06;
+  color: #fefefe;
+}
+footer p{
+  color: #ba0e0e;
 }
 footer a{
   transition: all 0.3s ease;
@@ -344,10 +351,12 @@ footer a:hover{
   
 }
 .rowcontainer__parrafos{
-  width: 100;
-  margin: 1rem;
+  width: 100%;
+  margin:3px;
+ 
 
 }
+
 .rowcontainer__parrafos p{
   color: #4d0404;
   font-size: 1rem;
@@ -377,6 +386,61 @@ footer a:hover{
   margin: 3px;
   padding: 5px;
   background: linear-gradient(to left, rgb(59, 7, 7), rgb(220, 27, 27));
+}
+/******************* animaciones en nosotros********************/
+.animation_container{
+  display: flex;
+}
+.zoom{
+  width: 100vw;
+  margin: 1rem;
+  border-radius: 5px;
+  padding: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+  align-content: center;
+  align-content: space-around;
+  text-align: center;
+  color: #3a0303;
+}
+.zoom{
+  transition: 1.5s ease;
+ 		-moz-transition: 1.5s ease; /* Firefox */
+ 		-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 		-o-transition: 1.5s ease; /* Opera */
+     -webkit-animation-name: cambiarColor;
+  animation-name: cambiarColor;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+	}
+.container .zoom:hover{
+  transform : scale(2);
+		-moz-transform : scale(1.5); /* Firefox */
+		-webkit-transform : scale(1.5); /* Chrome - Safari */
+		-o-transform : scale(1.5); /* Opera */
+		-ms-transform : scale(1.5); /* IE9 */
+}
+@-webkit-keyframes cambiarColor {
+  0% {
+    background-color: #fa0000;
+  }
+  50%{
+    background-color: #800707;
+  }
+  100% {
+    background-color: rgb(160, 130, 12);
+  }
+}
+
+@keyframes cambiarColor {
+  0% {
+    background-color: #ea0a0a;
+  }
+  100% {
+    background-color: rgb(216, 199, 17);
+  }
 }
 
 /******************************************* Servicios financieros **************************************/
@@ -538,10 +602,13 @@ p{
     .container{
       display: inline;
       position:static;
+      width: 90vw;
+      text-align: center;
+      margin: 2rem;
     }
   }
 
-  @media only screen and (max-width:700px){/*-------------------------vsta mobil-------------------*/
+  @media only screen and (max-width:500px){/*-------------------------vsta movil-------------------*/
     .main__textContent h2{
       position: absolute;
       top: 38vw;
@@ -555,20 +622,34 @@ p{
       top: 45vw;
       left: 10%;
       font-size: 1rem;
-      
-  
-  }
+
+    }
+
+    .container{
+      width: 100vh;
+    }
+    .row {
+      align-content: center;
+      width: 95vw;
+      margin: 5px;
+    }
+    .row .rowcontainer__parrafos{
+      text-align: justify;
+      width: 100vh;
+    }
+    .row .rowcontainer__parrafos p{
+      text-align: justify;
+      width: 100;
+    }
   .row img{
     width: 100vw;
     padding: 2rem;
   }
 
-
-
-
     footer{
       position: static;
       width: 100vw;
+      height: auto;
     }
     footer .content .box{
       width: 100vw;
@@ -577,10 +658,11 @@ p{
     footer .content .middle{
       padding-left: 0;
     }
+   
   }
+/************************ vista tableta ************/
 
-
-    @media only screen and (min-width:701px) and (max-width:850px){
+    @media only screen and (min-width:501px) and (max-width:850px){
       .main__textContent h2{
         position: absolute;
         top: 30vw;
