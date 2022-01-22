@@ -69,9 +69,20 @@
   font-size: 1rem;
   font-weight: 700;
 }
+.bg-light li a{
+  transition: 1.5s ease;
+ 		-moz-transition: 1.5s ease; /* Firefox */
+ 		-webkit-transition: 1.5s ease; /* Chrome - Safari */
+ 		-o-transition: 1.5s ease; /* Opera */
+}
 .bg-light li a:hover{
 
   background: rgb(58, 2, 2);
+  transform : scale(2);
+  -moz-transform : scale(1.5); /* Firefox */
+  -webkit-transform : scale(1.5); /* Chrome - Safari */
+  -o-transform : scale(1.5); /* Opera */
+  -ms-transform : scale(1.5); /* IE9 */
 }
 
 /*************** MODIFICACIONES CONTAINER BOOTSTRAP  ***************/
@@ -153,7 +164,7 @@
 }
 .container {
   display: flex;
-  width: 80vw;
+  width: 100vw;
  
 }
 .row .container__figure {
@@ -164,7 +175,7 @@
 }
 .container__parrafos{
   margin: 1rem;
-
+width: 90%;
 }
 .container__parrafos p{
   font-family: Arial, Helvetica, sans-serif;
