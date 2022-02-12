@@ -635,6 +635,21 @@ p{
       font-size: 1rem;
 
     }
+    .bg-light li a{
+      transition: 1.5s ease;
+         -moz-transition: 1.5s ease; /* Firefox */
+         -webkit-transition: 1.5s ease; /* Chrome - Safari */
+         -o-transition: 1.5s ease; /* Opera */
+    }
+    .bg-light li a:hover{
+    
+      background: rgb(58, 2, 2);
+      transform : scale(1);
+      -moz-transform : scale(1); /* Firefox */
+      -webkit-transform : scale(1); /* Chrome - Safari */
+      -o-transform : scale(1); /* Opera */
+      -ms-transform : scale(1); /* IE9 */
+    }
 
     .container{
       width: 100vh;
